@@ -219,7 +219,7 @@ public class BankAccount {
         toAccount.deposit(amount);
     }
 
-    public void calcSimpleInterest(double principal, int time, double rate) {
+    public void calcSimpleInterest(double principal, int time, double rate) { // calculates simple interest
         double amount = principal * (1 + rate * time);
         double interest = amount - principal;
         System.out.println("Current Rate is: " + rate + "%");
