@@ -46,9 +46,9 @@ public class Arrays {
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
         '!', '@', '#', '$', '%', '^', '&', '*', '(', ')','<','>','/','?'};
     
-        for (int i = 0; i < password.length(); i++) {
-            char c = password.charAt(i);
-            for (int j = 0; j < alphabet.length; j++) {
+        for (int i = 0; i < password.length(); i++) { // loop through the password and check if the character is in the alphabet 
+            char c = password.charAt(i); 
+            for (int j = 0; j < alphabet.length; j++) { // if it is, add it to the answer
                 if (c == alphabet[j]) {
                     answer += c;
                     break;
@@ -65,16 +65,16 @@ public class Arrays {
         int[] sortedArray = new int[nums.length]; // new array to put sorted numbers in
     
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] > nums[j]) {
-                    int temp = nums[i];
+            for (int j = i + 1; j < nums.length; j++) { // find the smallest number in the array and put it in the first index and so on
+                if (nums[i] > nums[j]) {                
+                    int temp = nums[i];                   
                     nums[i] = nums[j];
                     nums[j] = temp;
                 }
             }
         }
     
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) { // put sorted numbers in new array
             sortedArray[i] = nums[i];
         }
         return sortedArray;
